@@ -37,7 +37,12 @@
   <div>
     <h2>TWEETS</h2>
     <div *ngFor="let d of data?.tweets" fxLayout="column" fxLayoutGap="20px">
-      <mat-card *ngIf="d">{{ d }}</mat-card>
+      <mat-card *ngIf="d">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+          <span>{{ d?.time }}</span>
+          <span> {{ d?.text }}</span>
+        </div>
+      </mat-card>
     </div>
   </div>
 

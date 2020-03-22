@@ -19,9 +19,18 @@ const parse = catchAsync(async (req, res, next) => {
         let tweets = [];
 
         //get available tweets
-        $(".js-tweet-text-container p.tweet-text").each(function (i, item) {
-          $(item).find('a').replaceWith('');
-          tweets.push($(item).text().trim());
+        $("div.tweet").each(function (i, item) {
+          $(item).each(function (i, item) {
+            const tweetContainer = $(item).find('.js-tweet-text-container p.tweet-text');
+            const tweetTimeStamp = $(item).find('a.tweet-timestamp span');
+            tweetContainer.find('a').replaceWith('');
+
+            if (tweetContainer.text().trim() !== '')
+              tweets.push({
+                time: tweetTimeStamp.text().trim(),
+                text: tweetContainer.text().trim()
+              });
+          });
         });
 
         //data response

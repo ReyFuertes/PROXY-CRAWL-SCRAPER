@@ -19,8 +19,8 @@ export class FormComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      url: ['https://twitter.com/dprincessmaja', Validators.required],
-      token: ['gTfylEQaSrpyT3t7SkP1WQ', Validators.required]
+      url: ['', Validators.required],
+      token: ['', Validators.required]
     })
   }
 

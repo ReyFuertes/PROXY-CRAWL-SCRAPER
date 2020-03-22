@@ -5,6 +5,11 @@
     min-width: 500px !important;
   }
 }
+.test-info {
+  font-size: 14px;
+  color: #888;
+  padding: 20px;
+}
 ::ng-deep {
   .mat-raised-button[disabled]:not([class*="mat-elevation-z"]) {
     cursor: not-allowed;
