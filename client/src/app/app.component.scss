@@ -1,0 +1,14 @@
+::ng-deep {
+  .mat-card {
+    width: 500px;
+  }
+  .mat-form-field {
+    width: 100%;
+  }
+  .btn-container {
+    width: 100%;
+    button {
+      width: 100%;
+    }
+  }
+}

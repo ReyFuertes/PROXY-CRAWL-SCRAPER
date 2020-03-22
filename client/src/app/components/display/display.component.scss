@@ -1,0 +1,20 @@
+.display-container {
+  padding: 20px;
+  > div:first-child {
+    width: 500px;
+  }
+  > div:last-child {
+    width: 100%;
+  }
+}
+::ng-deep {
+  .mat-toolbar {
+    span {
+      cursor: pointer;
+    }
+  }
+  .mat-card {
+    margin-bottom: 20px;
+    width: 95%;
+  }
+}

@@ -1,0 +1,47 @@
+<mat-toolbar fxLayoutAlign="end center">
+  <span (click)="backEmitter.emit(false)">Back</span>
+</mat-toolbar>
+<div class="display-container" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="20px">
+  <div fxLayout="column" fxLayoutAlign="start start">
+    <h2>INFORMATION</h2>
+    <mat-form-field *ngIf="data?.name" appearance="outline">
+      <mat-label>NAME</mat-label>
+      <input matInput [value]="data?.name" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field *ngIf="data?.joinedDate" appearance="outline">
+      <mat-label>JOINED DATE</mat-label>
+      <input matInput [value]="data?.joinedDate" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field *ngIf="data?.birthDate" appearance="outline">
+      <mat-label>BIRTHDATE</mat-label>
+      <input matInput [value]="data?.birthDate" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field *ngIf="data?.bio" appearance="outline">
+      <mat-label>BIO</mat-label>
+      <input matInput [value]="data?.bio" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field *ngIf="data?.location" appearance="outline">
+      <mat-label>LOCATION</mat-label>
+      <input matInput [value]="data?.location" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field *ngIf="data?.followers" appearance="outline">
+      <mat-label>FOLLOWERS</mat-label>
+      <input matInput [value]="data?.followers" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field *ngIf="data?.following" appearance="outline">
+      <mat-label>FOLLOWING</mat-label>
+      <input matInput [value]="data?.following" autocomplete="off">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <h2>TWEETS</h2>
+    <div *ngFor="let d of data?.tweets" fxLayout="column" fxLayoutGap="20px">
+      <mat-card *ngIf="d">{{ d }}</mat-card>
+    </div>
+  </div>
+
+  <!-- <div class="btn-container" fxLayoutAlign="center center">
+    <button (click)="onBack()" mat-raised-button color="primary">Back</button>
+  </div> -->
+</div>

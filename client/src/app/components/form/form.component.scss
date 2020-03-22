@@ -1,0 +1,12 @@
+.form-container {
+  > div {
+    max-width: 500px;
+    width: 500px !important;
+    min-width: 500px !important;
+  }
+}
+::ng-deep {
+  .mat-raised-button[disabled]:not([class*="mat-elevation-z"]) {
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,4 @@
+<div fxLayout="column">
+  <app-form *ngIf="!hasReponse" [isLoading]="isLoading" (valueEmitter)="onClick($event)"></app-form>
+  <app-display *ngIf="hasReponse" [data]="response" (backEmitter)="hasReponse = $event"></app-display>
+</div>

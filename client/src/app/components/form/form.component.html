@@ -1,0 +1,22 @@
+<div class="form-container" fxLayoutAlign="center center">
+  <div fxLayout="column" [formGroup]="form" fxLayoutAlign="center center" fxFlexFill>
+    <h2>Scrapper</h2>
+    <mat-card>
+      <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="20px">
+        <mat-form-field appearance="outline">
+          <mat-label>URL</mat-label>
+          <input matInput formControlName="url" placeholder="YOUR URL HERE" autocomplete="off">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>TOKEN</mat-label>
+          <input matInput formControlName="token" placeholder="YOUR TOKEN HERE" autocomplete="off">
+        </mat-form-field>
+
+        <div class="btn-container" fxLayoutAlign="center center">
+          <button [disabled]="!form.valid || isLoading" [ngClass]="{'disabled': isLoading}" (click)="onSubmit()" mat-raised-button color="primary">SUBMIT</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
